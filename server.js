@@ -23,8 +23,8 @@ const PORT = process.env.PORT || 3000;
 app.post('/create-payment-intent', async (req, res) => {
   try {
     const paymentIntent = await stripeInstance.paymentIntents.create({
-      amount: 3500, // O valor em CENTAVOS (R$ 9,90 = 990 centavos)
-      currency: 'brl', // Moeda em Reais Brasileiros
+      amount: 890, // O valor em CENTAVOS (R$ 9,90 = 990 centavos)
+      currency: 'eur', // Moeda em Reais Brasileiros
       // Ativa métodos de pagamento automáticos, o Stripe decide quais mostrar
       automatic_payment_methods: {
         enabled: true,
